@@ -1,15 +1,16 @@
 const express = require('express');
 // const https = require('https');
-// const path = require('path');
+ const path = require('path');
 // const fs = require('fs');
+const logger = require("morgan");
 const app = express();
 const bodyParser = require("body-parser");
 const cors = require('cors');
 app.use(cors());
 
-// app.use(express.static(path.join(__dirname, 'build')));
+// app.use(express.static(path.join(__dirname, 'client/public')));
 // app.get('/', function(req, res) {
-//   res.sendFile(path.join(__dirname, 'build', 'index.html'));
+//   res.sendFile(path.join(__dirname, 'client/public', 'index.html'));
 // });
 
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -19,22 +20,10 @@ app.use(logger("dev"));
 
 const router = express.Router();
 
-app.get('/findAPI', callD_alembert);
+router.post("/getData", (req, res) => {
+    res.send("Hello World")
+})
 
-function callD_alembert(req, res) {
-  // using spawn instead of exec, prefer a stream over a buffer
-  // to avoid maxBuffer issue
-  var spawn = require('child_process').spawn;
-  var process = spawn('python', ['./app.py',
-    req.query.funds, // starting funds
-    req.query.size, // (initial) wager size
-    req.query.count, // wager count — number of wagers per sim
-    req.query.sims // number of simulations
-  ]);
-  process.stdout.on('data', function (data) {
-    res.send(data.toString());
-  });
-}
 app.use("/api", router);
 
 app.listen(8080,()=>{
