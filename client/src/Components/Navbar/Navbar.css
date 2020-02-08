@@ -1,0 +1,49 @@
+.navbark.navbar.navbar-expand-lg.navbar-light.sticky-top {
+  background-color: black;
+  z-index: 1;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}
+.navbar-light .navbar-toggler-icon
+{
+  background-image:url('./hamburger.jpg');
+}
+.ui.header.header-brand {
+  color: goldenrod;
+  font-family: "Titillium Web";
+}
+@media only screen and (max-width: 700px) {
+  .ui.image.logo {
+    max-width: 100%;
+  }
+}
+
+.ui.image.logo:hover {
+  transform: scale(1.1) perspective(1px);
+}
+
+.navbar-light .navbar-nav .nav-link {
+  margin-left: 40px;
+  color: goldenrod;
+  border-radius: 0px;
+  font-family: "Titillium Web";
+  font-weight: 100;
+  margin-top: auto;
+  margin-bottom: auto;
+  white-space: nowrap;
+  margin-bottom: auto;
+  font-size: 20px;
+  border-bottom: 3px solid transparent;
+}
+
+.navbar-light .navbar-nav .nav-link:hover {
+  transition: 1s;
+  border-bottom: 3px solid goldenrod;
+  color: white;
+}
+.navbar-light .navbar-nav .nav-link:active {
+  border-bottom: 3px solid goldenrod;
+  color: white;
+}
