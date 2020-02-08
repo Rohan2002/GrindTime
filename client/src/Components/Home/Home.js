@@ -38,6 +38,9 @@ export default class Home extends React.Component
                 pointer.setState({humidity: data["main"]["humidity"]})
                 let TEMP = Math.round(pointer.KtoC(parseFloat(data["main"]["temp"])));
                 pointer.setState({temp: TEMP});
+                console.log(data["main"]);
+                console.log(data["main"]["humidity"]);
+                console.log(this.state.humidity)
             });
     }
     
