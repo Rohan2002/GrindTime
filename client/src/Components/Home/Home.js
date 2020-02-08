@@ -40,7 +40,7 @@ export default class Home extends React.Component
                 let TEMP = Math.round(pointer.KtoC(parseFloat(data["main"]["temp"])));
                 pointer.setState({temp: TEMP});
                 
-                axios.post("/api/putData", {
+                axios.post("http://localhost:3001/api/putData", {
                   Lat: pointer.state.lat,
                   Long: pointer.state.long,
                   Humidity: data["main"]["humidity"],

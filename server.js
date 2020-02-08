@@ -1,31 +1,24 @@
-const express = require('express');
-// const https = require('https');
- const path = require('path');
-// const fs = require('fs');
-const logger = require("morgan");
+const express = require("express");
 const app = express();
+const cors = require("cors");
 const bodyParser = require("body-parser");
-const cors = require('cors');
-app.use(cors());
+const logger = require("morgan");
+const router = express.Router();
+const port = process.env.PORT || 3001;
 
-// app.use(express.static(path.join(__dirname, 'client/public')));
-// app.get('/', function(req, res) {
-//   res.sendFile(path.join(__dirname, 'client/public', 'index.html'));
-// });
+//app.use(cors());
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(logger("dev"));
 
-
-const router = express.Router();
-
-router.post("/getData", (req, res) => {
-    res.send("Hello World")
-})
-
+router.post("/putData", (req, res) => {
+  const { Lat, Long, Humidity, Temp } = req.body;
+  console.log("Rohan");
+  console.log(Lat);
+  return "Rohan";
+});
 app.use("/api", router);
-
-app.listen(8080,()=>{
-    console.log("server started at port 8080")
-})
+app.listen(port, function() {
+  console.log("Runnning on " + port);
+});
