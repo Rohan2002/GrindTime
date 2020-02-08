@@ -1,0 +1,39 @@
+#footer
+{
+    background-color:#222;
+
+    
+}
+.footermain
+{
+    padding-top: 3em;
+    padding-bottom: 3em;
+}
+
+.location-icon
+{
+   display: inline-block;
+   color:white;
+   vertical-align: middle;
+   
+}
+.ui.header.header-content
+{
+    color:white;
+    font-size: 15px;
+    font-weight: 400;
+    font-family: "Titillium Web";
+}
+
+.footer-holder
+{
+    vertical-align: middle;
+    text-align:left;
+}
+.social-hold
+{
+    display: inline-block;
+}
+.link-email{
+    color:white;
+}
