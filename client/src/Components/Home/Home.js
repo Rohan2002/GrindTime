@@ -40,7 +40,6 @@ export default class Home extends React.Component
                 pointer.setState({temp: TEMP});
                 console.log(data["main"]);
                 console.log(data["main"]["humidity"]);
-                console.log(this.state.humidity)
             });
     }
     
