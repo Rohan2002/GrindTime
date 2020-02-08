@@ -1,8 +1,8 @@
 import React from 'react';
 import Navbar from '../Navbar/Navbar';
-import Home1 from '../Home/Home1'
 import Footer from '../Footer/Footer';
 import {Header} from 'semantic-ui-react';
+import axios from "axios";
 export default class Home extends React.Component
 {
     constructor(props) {
@@ -13,7 +13,7 @@ export default class Home extends React.Component
     componentDidMount() {
       window.navigator.geolocation.getCurrentPosition(
         position => {
-          this.setState({ lat: position.coords.latitude });
+          this.setState({lat: position.coords.latitude });
           this.setState({long: position.coords.longitude});
           this.fetchAPI();
         },
@@ -23,6 +23,7 @@ export default class Home extends React.Component
       );
       
     }
+
     KtoC(temp)
     {
         return (temp - 273.15);
@@ -38,8 +39,19 @@ export default class Home extends React.Component
                 pointer.setState({humidity: data["main"]["humidity"]})
                 let TEMP = Math.round(pointer.KtoC(parseFloat(data["main"]["temp"])));
                 pointer.setState({temp: TEMP});
-                console.log(data["main"]);
-                console.log(data["main"]["humidity"]);
+                
+                axios.post("/api/putData", {
+                  Lat: pointer.state.lat,
+                  Long: pointer.state.long,
+                  Humidity: data["main"]["humidity"],
+                  Temp: TEMP
+                })
+                .then(response => { 
+                  console.log(response)
+                })
+                .catch(error => {
+                    console.log(error.response)
+                });      
             });
     }
     
