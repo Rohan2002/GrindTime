@@ -1,6 +1,7 @@
 absl-py==0.9.0
 acme==0.31.0
 asn1crypto==0.24.0
+sklearn
 astor==0.8.1
 attrs==17.4.0
 Automat==0.6.0
