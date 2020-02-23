@@ -18,12 +18,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Aarav545/HackTheBlob.git"
+    "url": "git+https://github.com/Rohan2002/Top5-HackTheBlob-NodeJS-ML.git"
   },
   "author": "Rohan, aarav, azfar, nabeel",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Aarav545/HackTheBlob/issues"
+    "url": "https://github.com/Rohan2002/Top5-HackTheBlob-NodeJS-ML.git/issues"
   },
-  "homepage": "https://github.com/Aarav545/HackTheBlob#readme"
+  "homepage": "https://github.com/Rohan2002/Top5-HackTheBlob-NodeJS-ML.git#readme"
 }
