@@ -9,6 +9,6 @@
 NodeJS Back-end and React front-end done by Rohan
 Machine Learning and data analysis by Azfar
 
-#Note: No ui on this version:// see ui on <a href="https://github.com/Rohan2002/FlaskApp"/>
+#Note: No good ui on this version... see ui on our flask app: https://github.com/Rohan2002/FlaskApp"
 
 
