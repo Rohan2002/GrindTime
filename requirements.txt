@@ -9,7 +9,7 @@ beautifulsoup4==4.8.2
 blinker==1.4
 certbot==0.31.0
 certbot-nginx==0.31.0
-certifi==2019.11.28
+certifi==2022.12.7
 chardet==3.0.4
 Click==7.0
 cloud-init==19.3
